@@ -1,72 +1,119 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header";
-import Heading from "./Heading";
 import Card from "./Card";
 function App() {
   const cards = [
     {
-      plan: "Free",
+      plan: "FREE",
       price: 0,
       features: [
         {
-          name: "10 users included",
+          name: "Single User",
           enable : true
         },
         {
-          name: "2 GB of storage",
+          name: "50GB Storage",
           enable : true
         },
         {
-          name: "Email support",
+          name: "Unlimited Public Projects",
+          enable : true
+        },
+        {
+          name: "Community Access",
+          enable : true
+        },
+        {
+          name: "Unlimited Private Projects",
           enable : false
         },
         {
-          name: "Help center access",
+          name: "Dedicated phone Support",
           enable : false
         },
-      ],
-    },
-    {
-      plan: "Pro",
-      price: 15,
-      features: [
         {
-          name: "20 users included",
-          enable : true
+          name: "Free Subdomain",
+          enable : false
         },
         {
-          name: "10 GB of storage",
-          enable : true
-        },
-        {
-          name: "Priority email support",
-          enable : true
-        },
-        {
-          name: "Help center access",
+          name: "Monthly Status Reports",
           enable : false
         },
       ],
     },
     {
-      plan: "Enterprise",
-      price: 29,
+      plan: "PLUS",
+      price: 9,
       features: [
         {
-          name: "40 users included",
+          name: "5 Users",
           enable : true
         },
         {
-          name: "15 GB of storage",
+          name: "50GB Storage",
           enable : true
         },
         {
-          name: "Phone and email support",
+          name: "Unlimited Public Projects",
           enable : true
         },
         {
-          name: "Help center access",
+          name: "Community Access",
+          enable : true
+        },
+        {
+          name: "Unlimited Private Projects",
+          enable : true
+        },
+        {
+          name: "Dedicated phone Support",
+          enable : true
+        },
+        {
+          name: "Free Subdomain",
+          enable : true
+        },
+        {
+          name: "Monthly Status Reports",
+          enable : false
+        },
+      ],
+    },
+    {
+      plan: "PRO",
+      price: 49,
+      features: [
+        {
+          name: "5 Users",
+          enable : true
+        },
+        {
+          name: "50GB Storage",
+          enable : true
+        },
+        {
+          name: "Unlimited Public Projects",
+          enable : true
+        },
+        {
+          name: "Community Access",
+          enable : true
+        },
+        {
+          name: "Unlimited Private Projects",
+          enable : true
+        },
+        {
+          name: "Dedicated phone Support",
+          enable : true
+        },
+        {
+          name: "Free Subdomain",
+          enable : true
+        },
+        {
+          name: "Monthly Status Reports",
           enable : true
         },
       ],
@@ -75,9 +122,8 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <Heading />
       <main>
-        <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div className="row row-cols-1 row-cols-md-3 mb-3 text-center text-bg-primary p-3">
           {cards.map((card, index) => {
             return <Card key={index} card={card} />;
           })}
